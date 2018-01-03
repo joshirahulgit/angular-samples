@@ -1,0 +1,11 @@
+<!-- Here object name can be aliased, please refer below employees -->
+<div *ngIf="employeeList as employees; else loading">
+  <div *ngFor="let employee of employees; count as count; index as i" >
+    <span>{{employee.id}}</span>
+    <span>{{employee.employee_name}}</span>
+    <span>{{employee.employee_salary}}</span>
+    <span>{{employee.employee_age}}</span>
+  </div>
+</div>
+<ng-template #loading>Loading...</ng-template>
+
